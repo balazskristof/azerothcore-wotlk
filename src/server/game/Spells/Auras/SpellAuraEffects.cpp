@@ -5720,6 +5720,7 @@ void AuraEffect::HandleAuraDummy(AuraApplication const* aurApp, uint8 mode, bool
                     case 57820: // Ebon Champion
                     case 57821: // Champion of the Kirin Tor
                     case 57822: // Wyrmrest Champion
+                    case 413430: // Sons of Hodir Champion
                         {
                             if (!caster || !caster->IsPlayer())
                                 break;
@@ -5742,6 +5743,9 @@ void AuraEffect::HandleAuraDummy(AuraApplication const* aurApp, uint8 mode, bool
                                     case 57822:
                                         FactionID = 1091;
                                         break; // The Wyrmrest Accord
+                                    case 413430:
+                                        FactionID = 1119;
+                                        break; // The Sons of Hodir
                                 }
                             }
                             caster->ToPlayer()->SetChampioningFaction(FactionID);
